@@ -13,7 +13,6 @@ body
 {
    /* overflow-x: hidden; */
    background-color: transparent;
-    height: 100vh;
     font-family: 'Poppins';
     scroll-behavior: smooth;
     overscroll-behavior: none;
@@ -242,12 +241,9 @@ a{
      font-family: 'Ubuntu', sans-serif;
      font-size: 2em;
 }
-#about{
-    margin-top: 10%;
-    margin-left: 10%;
-}
+
 #rules{
-    margin-top: 50%;
+    margin-top: 30%;
 }
 
 /* Social Icons */
@@ -345,12 +341,8 @@ a{
     border-radius: 15px;
 }
 #about{
-  margin-top: 10%;
-  margin-left: 2%;
+  margin-top: 30%;
 }
-#rules{
-  
-  margin-top: 50%;
-}
+
   }
   

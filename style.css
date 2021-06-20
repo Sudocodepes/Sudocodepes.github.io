@@ -15,7 +15,8 @@ body
    background-color: transparent;
     height: 100vh;
     font-family: 'Poppins';
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
 }
 
 .webgl
@@ -247,7 +248,6 @@ a{
 }
 #rules{
     margin-top: 50%;
-    margin-left: 10%;
 }
 
 /* Social Icons */
@@ -351,7 +351,6 @@ a{
 #rules{
   
   margin-top: 50%;
-  margin-left: 2%;
 }
   }
   

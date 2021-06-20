@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>RegistrationForm</title>
+
+    <meta
+      name="description"
+      content="Register to participate in SUDOCODE, a hackathon organised by BMSCE IEEE PES Student Chapter"
+    />
+</head>
+<body onload="delete_preloader()" style="background-color: #0d0d0e;">
+  <script>
+    console.clear();
+     function delete_preloader() {
+    var preloader = document.getElementById("loader");
+      preloader.style.display='none';
+}
+function show_preloader() {
+    var preloader = document.getElementById("loader");
+      preloader.style.display='flex';
+}
+function remove_preloader() {
+  alert("There seems to be an error with your network please try again")
+    var preloader = document.getElementById("loader");
+      preloader.style.display='none';
+}
+  </script>
+  <div id="loader">
+    <div class="preloader"></div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark mb-3 fixed-top" id="navbar"
+     style="padding: 5px 10px;background-color: rgba(13, 13, 14, 0.9);" >
+      <div class="container-fluid" >
+        <div class="row align-items-center">
+          <img src="./logo-white.png" class="image-fluid" alt="logo" height="auto" width="10%" />
+          <a href="#top" class="navbar-brand"> <span>S</span><span>U</span><span>D</span><span>O</span><span>C</span><span>O</span><span>D</span><span>E</span></a>
+        </div>
+      </div>  
+  </nav>
+  
+    <!-- <img src="E:\web dev\SUDOCODE\form\logo-white.png" alt="logo" height="auto" width="10%" > -->
+   <div class="container-fluid">
+    <h1 class="head" style="padding-top: 90px;">Registration Form</h1>
+    <form  method="post" autocomplete="off" name="google-sheet">
+        <div class="row">
+          <div class="col-12 col-md-6">
+              <label for="01">Name</label>
+              <br>
+              <input class="finp" type="text" name="name" autocomplete="off" id="01" required>
+              <br>
+              <br>
+              <label for="02">Email</label>
+              <br>
+              <input class="finp" type="email" autocomplete="off" name="email" id="02" required>
+              <br>
+              <br>
+              <label for="03">Phone number</label>
+              <br>
+              <input class="finp" type="text" minlength="10" maxlength="10" name="phone" id="03" autocomplete="off" required> 
+              <br>
+              <br>
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="04">Year of study</label>
+            <br>
+            <div class="row">
+              <div class="col-auto">
+                <input type="radio" name="year" id="1" value="1" required>
+                <label for="1" style="margin-left: 30px;">1</label><br>
+              </div>
+              <div class="col-auto">
+                <input type="radio" name="year" id="2" value="2" required>
+                <label style="margin-left: 30px;" for="2">2</label><br>
+              </div>
+
+              <div class="col-auto">
+                <input type="radio" name="year" id="3" value="3" required>
+                <label for="3" style="margin-left: 30px;">3</label><br >
+              </div>
+
+              <div class="col-auto">
+                <input type="radio" name="year" id="4" value="4" required>
+                <label for="4" style="margin-left: 30px;">4</label><br>
+              </div>
+
+            </div>
+            <br>
+            <label for="10">Are you an IEEE member?</label>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-auto">
+                <input type="radio" name="member" id="yes" required value="yes" onclick="document.querySelector('.reveal').style.display='block';  document.getElementById('mem').required = true;">
+                <label for="yes" style="margin-left: 30px;">Yes</label><br>
+              </div>
+
+              <div class="col-auto">
+                <input type="radio" name="member" id="no" required value="no" onclick="document.querySelector('.reveal').style.display='none'; document.getElementById('mem').required = false;">
+                <label for="no" style="margin-left: 30px;">No</label><br>
+              </div>
+            </div>
+            <br>
+            <div class="reveal">
+                <label>Membership Number</label>
+                <br>
+                <input class="finp" type="text" name="member ID" id="mem">
+            </div>
+            <br>
+          </div>
+        </div>
+       
+        
+        
+        
+        <label for="05">Where did you hear about the event ?</label>
+        <br>
+        <input class="finp" type="text" name="advert" id="05" autocomplete="off">
+        <br>
+        <br>
+        <input type="submit" class="btn" style="margin-bottom: 2%;" value="Register">
+    </form>
+   </div>
+    <!-- <script src="fet.js"></script> -->
+    <script>
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxRa2wEcUXQFYTJrZKUXAHgE6kXZXC7CSjwhMxaFjHdmRolBjo49VHUMInHSby7IdI2/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => window.open("./success.html",'_self'))
+            .catch(error  => remove_preloader());
+        });
+
+        var formss=document.querySelector('form');
+        formss.addEventListener('submit',()=>{
+          show_preloader();
+        });
+      </script>
+</body>
+</html>

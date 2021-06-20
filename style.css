@@ -1,0 +1,357 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'valorant';
+    src: url('./Valorant_Font.ttf');
+}
+
+html,
+body
+{
+   /* overflow-x: hidden; */
+   background-color: transparent;
+    height: 100vh;
+    font-family: 'Poppins';
+    scroll-behavior: smooth
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    outline: none;
+    width: 100%;
+}
+
+.heading{
+    font-family: valorant;
+    margin-left: 10%;
+    color: turquoise;
+    margin-top: 2em;
+    font-size: 4em;
+    /* font-weight: bold; */
+    animation-name: load;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes load{
+0%{transform: translateY(0); opacity: 0;}
+50%{ opacity: 0.5;}
+100%{ transform: translateY(100px); opacity: 1; }
+}
+.tag{
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 10%;
+    margin-top: 6em;
+    color: turquoise;
+    animation-name: pload;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes pload {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.sbt{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: turquoise;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    height: 4em;
+    width: 10em;
+    margin-left: 10%;
+    outline: none;
+    border: 1px solid turquoise;
+    animation-name: load;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition-duration: 1s;
+    border-radius: 15px;
+}
+@keyframes pload {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.sbt:hover{
+  border: 2px solid red;
+  background-color: goldenrod;
+  font-size: 1em;
+  font-weight: bold;
+}
+.foot{
+  font-family: 'Ubuntu', sans-serif;
+    margin-top: 50%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* scroll bar */
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: black; 
+}
+::-webkit-scrollbar-thumb{
+  background:rgb(49, 167, 155);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background:turquoise;
+}
+/* scroll bar */
+span:hover{
+    color: goldenrod;
+    border: 2px solid red;
+}
+.abcd{
+    margin-top: 50%;
+    /* padding-bottom: 25%; */
+    height: 70px;
+    width: 100%;
+    /* background-color: turquoise; */
+    opacity: 1;
+    position: absolute;
+}
+a{
+    font-family: 'Ubuntu', sans-serif;
+}
+/* kirti */
+
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 999;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  
+  body .preloader #loader{
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .preloader{
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #24b662;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  .preloader:before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #24b662;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+  }
+  
+  .preloader:after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #24b662;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+  }
+  
+/* kirti */
+.fix{
+
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    padding-top: 0%;
+    top: 0;
+    z-index: 9;
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+  color: turquoise;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: goldenrod;
+  font-weight: bold;
+    border: 1px solid red;
+}
+.main{
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 2em;
+}
+#about{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+#rules{
+    margin-top: 50%;
+    margin-left: 10%;
+}
+
+/* Social Icons */
+
+.social-icon {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.social-icon:before,
+.social-icon:after {
+  content: " ";
+  display: table;
+}
+
+.social-icon:after {
+  clear: both;
+}
+
+.social-icon li {
+  display: inline-block;
+  margin: 0px 4px;
+}
+
+.social-icon li a {
+  /* display: block; */
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  text-align: center;
+  border: 0 none;
+  border-radius: 4px;
+  font-size: 30px;
+  box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon li a:hover {
+   box-shadow: 0px 8px 15px 0px rgba(90, 91, 95, 0.33);
+}
+
+/* Linkden */
+.fa-linkden { 
+  background: whitesmoke;
+  color: rgb(52, 52, 219);
+}
+
+/* Instagram */
+.fa-instagram {
+
+    color: rgb(225,48,108);
+  }
+  @media screen and (max-width: 750px){
+    .heading{
+      font-family: valorant;
+      margin-left: 2%;
+      color: turquoise;
+      margin-top: 3em;
+      font-size: 3em;
+      /* font-weight: bold; */
+      animation-name: load;
+      animation-duration: 4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  .tag{
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 2%;
+    margin-top: 6em;
+    color: turquoise;
+    animation-name: pload;
+    animation-delay: 3s;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .sbt{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: transparent;
+    color: white;
+    height: 4em;
+    width: 10em;
+    margin-left:2%;
+    outline: none;
+    border: 1px solid white;
+    animation-name: load;
+    animation-delay: 4s;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transition-duration: 1s;
+    border-radius: 15px;
+}
+#about{
+  margin-top: 10%;
+  margin-left: 2%;
+}
+#rules{
+  
+  margin-top: 50%;
+  margin-left: 2%;
+}
+  }
+  

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>SudoCode - Registration Form</title>
 
     <meta
@@ -42,7 +42,7 @@ function remove_preloader() {
       <div class="container-fluid" >
         <div class="row align-items-center">
           <img src="./logo-white.png" class="image-fluid" alt="logo" height="auto" width="10%" />
-          <a href="#top" class="navbar-brand"> <span>S</span><span>U</span><span>D</span><span>O</span><span>C</span><span>O</span><span>D</span><span>E</span></a>
+          <a href="#top" class="navbar-brand" style="font-family: 'Ubuntu', sans-serif; ;"> <span>S</span><span>U</span><span>D</span><span>O</span><span>C</span><span>O</span><span>D</span><span>E</span></a>
         </div>
       </div>  
   </nav>
@@ -68,6 +68,10 @@ function remove_preloader() {
               <input class="finp" type="text" minlength="10" maxlength="10" name="phone" id="03" autocomplete="off" required> 
               <br>
               <br>
+              <label for="10">HackerRank Username <a style="font-size: 0.8em;" href="https://www.hackerrank.com/auth/signup?h_r=home&h_l=body_middle_left_button&h_v=1" target="_blank">dont have one? click here</a></label><br>
+            <input class="finp" type="text" name="hacker_rank_id" autocomplete="off" id="01" required>
+            <br>
+            <br>
           </div>
           <div class="col-12 col-md-6">
             <label for="04">Year of study</label>
@@ -112,21 +116,16 @@ function remove_preloader() {
             <div class="reveal">
                 <label>Membership Number</label>
                 <br>
-                <input class="finp" type="text" name="member ID" id="mem">
+                <input class="finp" type="text" name="member ID" id="mem"><br>
             </div>
-            <br>
-          </div>
-        </div>
-       
-        
-        
-        
-        <label for="05">Where did you hear about the event ?</label>
+            <label for="05">Where did you hear about the event ?</label>
         <br>
         <input class="finp" type="text" name="advert" id="05" autocomplete="off">
         <br>
         <br>
         <input type="submit" class="btn" style="margin-bottom: 2%;" value="Register">
+          </div>
+        </div>
     </form>
    </div>
     <!-- <script src="fet.js"></script> -->

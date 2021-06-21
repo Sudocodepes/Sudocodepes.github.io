@@ -12,7 +12,7 @@ html,
 body
 {
    /* overflow-x: hidden; */
-   background-color: black;
+   background-color: transparent;
     font-family: 'Poppins';
     height: 100%;
     scroll-behavior: smooth;

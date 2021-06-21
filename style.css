@@ -73,7 +73,7 @@ body
     outline: none;
     border: 1px solid white;
     animation-name: load;
-    animation-delay: 2s;
+    animation-delay: 1s;
     opacity: 0;
     animation-duration: 1s;
     animation-fill-mode: forwards;

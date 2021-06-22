@@ -49,9 +49,10 @@
     </div>
     <nav class="navbar navbar-expand-md navbar-dark mb-3 fixed-top" id="navbar" style="padding: 5px 10px;">
         <div class="container-fluid" >
-            <img src="form/logo-white.png" class="image image-fluid" alt="logo" height="80px"  style="margin: 0;" />
-            <img src="Sudocodelogo.png" class="image image-fluid" alt="logo" height="40px" style="margin-right: 5px;" />
-            <a href="#top" class="navbar-brand mr-3 main"> <span>S</span><span>U</span><span>D</span><span>O</span><span>C</span><span>O</span><span>D</span><span>E</span></a>
+            <img src="form/logo-white.png" class="image image-fluid" alt="logo" height="50px" />
+            <img src="Sudocodelogo.png" class="image image-fluid" alt="logo" height="30px" />
+            <a href="#top" class="navbar-brand mr-3 main d-none d-md-block"> <span>S</span><span>U</span><span>D</span><span>O</span><span>C</span><span>O</span><span>D</span><span>E</span></a>
+            <a href="#top" class="navbar-brand mr-3 main d-md-none" style="font-size: large;"> <span>S</span><span>U</span><span>D</span><span>O</span><span>C</span><span>O</span><span>D</span><span>E</span></a>
             <button type="button" class="navbar-toggler" id="navtog" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -90,8 +91,6 @@
                         data-aos="fade-up" data-aos-duration="1000"
                         >SudoCode</h1>
                         <br/>
-                   
-          
           <div >
                         <p  data-aos="fade-up" 
                             data-aos-duration="1000">
@@ -119,23 +118,21 @@
                         </p>
                         <p data-aos="fade-up"  data-aos-duration="1000" style="font-size: 2em; color: turquoise;">TIMELINE:</p>
                         <p data-aos="fade-up"  data-aos-duration="1000">
-                                 26th June—>6PM To 9PM <br><br>
+                                 26th June —> 6PM To 9PM <br><br>
                        </p>
                        <p data-aos="fade-up"  data-aos-duration="1000">
-                        27th June—>11AM To 2PM
+                        27th June —> 11AM To 2PM
                        </p>
                         <p  data-aos="fade-up"  data-aos-duration="1000">
                         Discussion and Prize Distribution -<br><br>
-                        27th June—>6PM.
+                        27th June —> 6PM.
                         </p>
 
                         
                        
                   
-                        <p data-aos="fade-up" 
-                        data-aos-duration="1000">
-                        <p style="font-size: 2em; color: turquoise;">Registration fee:</p>
-                        </p>
+                        <p style="font-size: 2em; color: turquoise;" data-aos="fade-up" 
+                        data-aos-duration="1000">Registration fee:</p>
                         <p data-aos="fade-up" 
                                 data-aos-duration="1000">
                                 IEEE Members : &#x20b9;30
@@ -288,12 +285,11 @@ class TextScramble {
     const fx = new TextScramble(el)
     const next = () => {
     fx.setText(text).then(() => {
-    setTimeout(next, 2000)
+    setTimeout(next, 1000)
     })
     }
     next()
     }
-    scramble(document.getElementById("rulesheading"),"Sudo Code")
     scramble(document.getElementById("aboutheading"),"About Sudo Code")
     
 function isScrolledIntoView(el) {

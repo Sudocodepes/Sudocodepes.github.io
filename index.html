@@ -286,7 +286,7 @@ class TextScramble {
     const fx = new TextScramble(el)
     const next = () => {
     fx.setText(text).then(() => {
-    setTimeout(next, 3000)
+    setTimeout(next, 5000)
     })
     }
     next()

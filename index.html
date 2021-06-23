@@ -123,8 +123,9 @@
                        <p data-aos="fade-up"  data-aos-duration="1000">
                         27th June —> 11AM To 2PM
                        </p>
+                        <br>
                         <p  data-aos="fade-up"  data-aos-duration="1000">
-                        Discussion and Prize Distribution -<br></br>
+                        Discussion and Prize Distribution -<br>
                         27th June —> 6PM.
                         </p>
 
@@ -285,12 +286,12 @@ class TextScramble {
     const fx = new TextScramble(el)
     const next = () => {
     fx.setText(text).then(() => {
-    setTimeout(next, 1000)
+    setTimeout(next, 5000)
     })
     }
     next()
     }
-    scramble(document.getElementById("aboutheading"),"About Sudo Code")
+    scramble(document.getElementById("rulesheading"),"SudoCode")
     
 function isScrolledIntoView(el) {
     var rect = el.getBoundingClientRect();
